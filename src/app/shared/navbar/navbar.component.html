@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+
+        <img src="assets/images/freshcart-logo.svg" alt="">
+      </a>    
+ 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="isLoggedIn">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page"  routerLink="/home"  routerLinkeActive="active" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page"  routerLink="/cart"  routerLinkeActive="active" >Cart</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page"  routerLink="/product"  routerLinkeActive="active" >Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page"  routerLink="/categories"  routerLinkeActive="active" >Categories</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page"  routerLink="brands"  routerLinkeActive="active" >Brands</a>
+          </li>
+    
+        </ul>
+     
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item align-self-center">
+                <i class="fa-brands px-1  fa-facebook"></i>
+                <i class="fa-brands px-1  fa-twitter"></i>
+                <i class="fa-brands px-1  fa-instagram"></i>
+                <i class="fa-brands px-1  fa-youtube"></i>
+                <i class="fa-brands px-1  fa-linkedin"></i>
+
+              </li>
+
+
+
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page"  routerLink="/register"  routerLinkeActive="active"  *ngIf="!isLoggedIn">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page"  routerLink="/login"  routerLinkeActive="active"  *ngIf="!isLoggedIn">Login</a>
+            </li>
+  
+            <li class="nav-item">
+              <button class="nav-link " aria-current="page"  *ngIf="isLoggedIn"  (click)="signOut()">SinOut</button>
+            </li>
+  
+      
+      
+          </ul>
+      </div>
+    </div>
+  </nav>
